@@ -4,6 +4,9 @@ title: About
 permalink: /about/
 ---
 
+<img width="30%" style="float: left; margin: 0 20px 50% 0;" src="/assets/kms.jpeg" />
+<!-- ![Kareem Shehata Profile Photo](/assets/kms.jpeg) -->
+
 Hi, I'm Kareem! I'm passionate about the discovery, synthesis,
 dissemination of knowledge (i.e. learning new things, putting
 together different bits of learning, and sharing that knowledge with
