@@ -36,6 +36,8 @@ github_username:  kshehata
 collections:
   pubs:
     output: False
+  talks:
+    output: False
 
 kramdown:
   math_engine: katex

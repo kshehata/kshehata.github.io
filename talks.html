@@ -1,0 +1,17 @@
+---
+layout: page
+title: Talks
+permalink: /talks/
+---
+
+{% assign talks = site.talks | sort: "date" | reverse %}
+{% for t in talks %}
+<div class="pubitem">
+  <div class="pubtitle">
+    {% if t.pub_url %}<a href="{{ t.pub_url }}">{% endif %}
+      {{ t.title }}
+    {% if t.pub_url %}</a>{% endif %}
+  </div>
+  <div class="pubinfo">{{ t.venue }}, {{ t.date | date: "%d %B %Y" }}</div>
+</div>
+{% endfor %}
