@@ -4,20 +4,21 @@ title:  "Majority Voting"
 date:   2022-10-17 16:53:21 +0800
 katex:  True
 ---
+# Majority Voting
 
 # Problem
 
-You run an experiment $$n$$ times, each of which produces the incorrect result with probability $$f\le1/2$$. What must $$n$$ be to ensure that you get the correct answer with probability at least $$1-\delta$$?
+Here’s a problem that comes up very often in computer science. Let’s say you have some process that gives you the right answer ****most**** of the time, but not always. For example: you need to check if a particular transaction is “final” in a block chain. To keep things simple we’ll consider only “true or false” kind of questions. Let’s say the probability of getting the *****wrong***** answer is $$f \le 1/2$$.
 
-## Observations
+Obviously, you want the probability of getting things right to be a lot better than a half, so you run the process $$n$$ times independently, and then if the majority of the answers are true then you say the result is true, and false otherwise. How many times do you need to run the process (i.e. what must $$n$$ be) in order to get the correct answer with probability at least $$1 - \delta$$?
 
-As discussed in class, we’ll model this problem as a series of coin tosses, each with a probability of coming up tails $$f$$, and asking what is the probability that you get heads $$n/2$$ times or more?
+This is called the “Majority Voting” problem, and while there are several ways to analyse it. Usually a few simplifying assumptions are made and people just fast-forward to the bottom line that $$n \ge O \left( \log \frac{1}{\delta} \right)$$. While this is true, it hides the effect of all of the constants. How close can $$f$$ be to $$1/2$$?
 
-In this analysis I’ll try to be more rigorous than we could have done in class, including looking at the odd number of trials (to avoid ties) and looking at the constant values that we ignored. As we’ll see, the observation made by one of our classmates that the problem becomes intractable if the probability of failure becomes arbitrarily close to 1/2.
+I’m going to present an analysis here that uses as few approximations as possible so that we can study the effect of the constants at the end. It’s fairly detailed, but serves as a good example of how to do this kind of analysis.
 
 # Solution
 
-Since we’re looking for a majority, we’ll assume that we do an odd number of trials, i.e. $$n = 2t + 1$$. The probability of any particular combination of heads and tails can be modelled as a Binomial Distribution. Consider the probability that we get *******exactly******* $$t + 1$$ tails:
+Since we’re looking for a majority, we’ll assume that we do an odd number of trials, i.e. $$n = 2t + 1$$. We can model this problem as a series of coin tosses, each with a probability of coming up tails $$f$$, and asking what is the probability that you get heads $$t+1$$ times or more? The probability of any particular combination of heads and tails can be modelled as a Binomial Distribution. Consider the probability that we get *******exactly******* $$t + 1$$ tails:
 
 $$
 \Pr\left[t + 1 \text{ tails}\right] = {2t + 1 \choose t + 1} f^{t+1} (1-f)^{t} = p
@@ -59,8 +60,6 @@ $$
 \Pr\left[t + 1 \text{ tails}\right] \sim \frac{2t+1}{t+1}f \cdot \frac{2^{2t}}{\sqrt{\pi t}} \cdot \left(\frac{k}{2^2}\right)^t
 = \frac{2t+1}{t+1}f \cdot \frac{k^t}{\sqrt{\pi t}}
 $$
-
-Notice that it’s almost the same as we got in class, just with an extra term in the front to deal with the extra trial needed to make it odd. We could have included that in the error, as it’s pretty close to 1 if $$f$$ is close to 1/2, but we’ll leave it in for now.
 
 Now consider what happens if we get more failures:
 
@@ -179,6 +178,6 @@ This by itself when applied to $$\delta$$ is problematic. When combined with the
 
 # Conclusions
 
-Analysis given in class is correct for reasonable values of $$\varepsilon$$, but don’t forget to analyse your constants! In this case, if $$\varepsilon$$ gets very small, the constant values explode very badly.
+The analysis usually given that $$n \ge O \left( \log \frac{1}{\delta} \right)$$ is correct for reasonable values of $$\varepsilon$$, but don’t forget to analyse your constants! In this case, if $$\varepsilon$$ gets very small, the constant values explode very badly.
 
 This makes sense when you think about it. You’re essentially trying to distinguish two distributions: correct and incorrect responses. If the two are arbitrarily close to each other, you can’t distinguish without taking an arbitrarily large number of samples. If the two are far apart, you can distinguish them in a much smaller number of samples.
