@@ -33,6 +33,10 @@ url: "https://kshehata.github.io"
 # twitter_username: km_shehata
 github_username:  kshehata
 
+collections:
+  pubs:
+    output: False
+
 kramdown:
   math_engine: katex
 

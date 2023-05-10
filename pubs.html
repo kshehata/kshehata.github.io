@@ -1,0 +1,14 @@
+---
+layout: page
+title: Publications
+permalink: /pubs/
+---
+
+{% assign publications = site.pubs | sort: "year" | reverse %}
+{% for pub in publications %}
+<div class="pubitem">
+  <div class="pubtitle"><a href="{{ pub.pub_url }}">{{ pub.title }}</a></div>
+  <div class="pubauthors">{{ pub.authors }}</div>
+  <div class="pubinfo">{{ pub.publication }}, {{ pub.year}}</div>
+</div>
+{% endfor %}
