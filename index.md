@@ -4,7 +4,7 @@ layout: page
 
 <img width="30%" style="float: left; margin: 5px 20px 50% 0;" src="/images/kms.jpeg" />
 
-Hi, I'm Kareem! I'm passionate about the discovery, synthesis,
+Hi, I'm Kareem! I'm passionate about the discovery, synthesis, and
 dissemination of knowledge. I'm always learning, whether in my core
 research on cryptography, learning languages, or dog training. I'm
 currently pursuing a PhD under [Prateek
