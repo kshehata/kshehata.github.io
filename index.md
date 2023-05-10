@@ -25,5 +25,5 @@ Vasudevan](https://www.comp.nus.edu.sg/~prashant/research.html) for
 Cryptography](https://www.comp.nus.edu.sg/~prashant/teaching/CS5430/).
 
 In addition to my [CV](/cv/) and a list of my [talks](/talks/) and
-[publications](/publications/), you'll find a [blog](/blog/) where I sometimes
+[publications](/pubs/), you'll find a [blog](/blog/) where I sometimes
 write things.
