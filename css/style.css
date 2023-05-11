@@ -1,17 +1,34 @@
+.profile-left {
+  float: left;
+  width: 30%;
+}
+
+.profile-content{
+  float: right;
+  width: 70%;
+}
+
+.profile-inner-left {
+  padding-right: 10px;
+}
+
+.profile-inner-right {
+  padding-left: 10px;
+}
+
 .pubitem {
     margin: 2em 0;
     line-height: 1em;
   }
-  
-  .pubtitle {
-    margin-bottom: 0.5em;
-    line-height: 1.2em;
-    font-weight: bold;
-  }
-  
-  .pubauthors,
-  .pubinfo {
-    font-size: 75%;
-    margin-bottom: 0.75em;
-  }
-  
+
+.pubtitle {
+  margin-bottom: 0.5em;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+
+.pubauthors,
+.pubinfo {
+  font-size: 75%;
+  margin-bottom: 0.75em;
+}

@@ -1,8 +1,7 @@
 ---
-layout: page
+layout: profile
+pic: /images/kms.jpeg
 ---
-
-<img width="30%" style="float: left; margin: 5px 20px 50% 0;" src="/images/kms.jpeg" />
 
 Hi, I'm Kareem! I'm passionate about the discovery, synthesis, and
 dissemination of knowledge. I'm always learning, whether in my core
