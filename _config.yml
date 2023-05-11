@@ -40,7 +40,7 @@ collections:
     output: False
 
 kramdown:
-  math_engine: katex
+  math_engine: mathjax
 
 # Build settings
 theme: minima

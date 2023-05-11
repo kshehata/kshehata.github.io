@@ -2,7 +2,7 @@
 layout: post
 title:  "Majority Voting"
 date:   2022-10-17 16:53:21 +0800
-katex:  True
+mathjax:  True
 ---
 # Majority Voting
 

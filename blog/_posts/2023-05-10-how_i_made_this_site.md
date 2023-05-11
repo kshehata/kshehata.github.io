@@ -18,7 +18,9 @@ Jekyll and all its dependencies. Much easier than the GitHub docs.
 
 2. Once you have a site working locally, then follow the GitHub docs for setting up pages.
 
-3. Follow "Method 2" of [Xuning Yang's Guide](https://www.xuningyang.com/blog/2021-01-11-katex-with-jekyll/) to set up Katex with Jekyll
+3. From [this SO answer](https://stackoverflow.com/questions/34347818/using-mathjax-on-a-github-page)
+to enable MathJax you have to add the JS for it in your head. I wrapped it in a Liquid if-statement
+so that it's only loaded when needed, but that's optional.
 
 4. Follow [Daniel Sieger's guide](https://www.danielsieger.com/blog/2019/03/03/publication-pages-using-jekyll-collections.html) to make a publications list from a collection.
 
