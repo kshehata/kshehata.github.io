@@ -7,7 +7,7 @@ date:   2023-05-10 15:17:21 +0800
 This site uses:
 * [Jekyll](https://jekyllrb.com/)
 * [GitHub Pages](https://pages.github.com/)
-* [Katex](https://katex.org/) for math formatting
+* [MathJax](https://www.mathjax.org/) for math formatting
 * Custom sed script for taking Notion-exported pages and fixing the math formatting
 * Jekyll Collection for talks and pubs
 
