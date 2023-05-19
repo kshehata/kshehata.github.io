@@ -1,0 +1,42 @@
+---
+layout: post
+title:  "C++ Dev on a Mac"
+date:   2020-02-19 06:18:21 -0500
+---
+
+<p><b>TL;DR</b>&nbsp;I wrote a guide for quickly setting up a C++ dev environment. It's over on github at&nbsp;<a href="https://github.com/kshehata/Mac-Cpp-Quickstart">https://github.com/kshehata/Mac-Cpp-Quickstart</a></p>
+
+<p>I'm taking <a href="https://www.coursera.org/learn/crypto" target="_blank">Coursera / Stanford's course on cryptography</a> to brush up on the fundamentals. I figured I should do some of the example problems in C++, that way not only do I get to know crypto better, but I also brush up on C++ and learn the crypto libraries at the same time. I didn't need anything too complicated, just a C++ dev environment that will compile a class or two, unit tests, and the crypto library. Nothing too fancy, right?</p>
+
+<p>My first attempt was Xcode. I don't need anything cross-platform, just a sandbox basically, so Xcode should work. I was almost instantly disappointed, for the following reasons:</p>
+
+<ul>
+<li>No out-of-the box support for gtest. I was hoping this would be as easy as File -&gt; New -&gt; C++ Test Case. Nope.</li>
+<li>Difficult to configure C++ 17 support. This should be an easy setting. Instead you have to dive into compiler configs to make it happen</li>
+<li>No autoformatting</li>
+<li>Adding a library like Crypto++ would have been a hassle. Not difficult, just means integrating it into the project</li>
+<li>Far more complicated that I would like for a simple project, without any cross-platform benefits (this is my general complaint about IDEs)</li>
+</ul>
+
+<p>Basically, Xcode is great for developing iOS and Mac apps using Apple frameworks and Swift / Objective-C, but not great for anything else and definitely not aimed at C++ development. So what other options are there?</p>
+
+<p>I started looking around and found both <a href="https://cmake.org/" target="_blank">CMake</a> and <a href="https://bazel.build/" target="_blank">Bazel</a>. While I'm familiar with Bazel from my Google days, it seemed like overkill and it seemed like CMake is now the accepted standard and a lot more generally supported. CMake has also improved a ton since I last used it years ago and now looks like exactly what I need: just point it at a few sources and get a build. That it supports basically any platform and can even generate files for IDEs are just gravy.</p>
+
+<p>So that solves the build problem. What about dependencies like crypto++ and googletest?</p>
+
+<ol>
+<li>Include them in the project build itself as a submodule, as <a href="https://cliutils.gitlab.io/modern-cmake/chapters/testing/googletest.html" target="_blank">described in Modern CMake</a></li>
+<li>Do the old-school build and install at a system level</li>
+<li>Use something like <a href="https://brew.sh/" target="_blank">homebrew</a> to install them for you</li>
+</ol>
+
+<p>None of these are great options. The first one involves a lot of management of an external dependency within your project. If it's a critical library that may be a good idea, but if your dependencies start adding up this can get unwieldy very quickly. It also doesn't make sense for every project to have its own copy of gtest. That's so general it should really be at the system level.</p>
+
+<p>But the system level solutions are also problematic. What happens if two different projects want different version of the library? Or if you want to test changes to the library with your project? Do you really want to be installing dev packages system-wide for every dev dependency you have? More importantly: anyone who wants to build your code is going to have to do the same thing: install everything at a system level.</p>
+
+<p>Other dev environments have this figured out. In Python I can just do "pip install" and it'll take care of everything for me. Homebrew solves some of this, but at great cost. I really don't like installing homebrew, as it always seems to bring its own set of problems. Also: someone else trying to build my code is again going to have to install everything and hope it all works.</p>
+
+<p>Enter <a href="https://conan.io">Conan</a>. Conan is basically the C++ answer to pip. You specify what you need, and it takes care of setting it all up for you. It integrates cleanly with CMake, meaning you get all of your libraries included with very little effort. Now this is what I wanted when I set out to set up my dev environment!</p>
+
+<p>Since it took me a while to get to this point, I figured it was worth writing out what I did. Of course, that took a lot longer than I thought it would, but hopefully it'll be worth it for someone. Check it out here:</p>
+<p><a href="https://github.com/kshehata/Mac-Cpp-Quickstart">https://github.com/kshehata/Mac-Cpp-Quickstart</a></p>
