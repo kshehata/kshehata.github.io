@@ -28,7 +28,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   pursuing a PhD at National University of Singapore, where he
   sometimes teaches.
 
-baseurl: "" # the subpath of your site, e.g. /blog dummy-edit
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://kareem.shehata.ca"
 # twitter_username: km_shehata
 github_username:  kshehata
