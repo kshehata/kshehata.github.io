@@ -18,7 +18,7 @@ had before.
 In addition to research, I also love teaching and sharing knowledge.
 I've recently been awarded the NUS School of Computing Teaching
 Fellowship for excellence in teaching, and was a Teaching Assistant
-to [Prashan
+to [Prashant
 Vasudevan](https://www.comp.nus.edu.sg/~prashant/research.html) for
 [CS4230/5430 Foundations of Modern
 Cryptography](https://www.comp.nus.edu.sg/~prashant/teaching/CS5430/).
