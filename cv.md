@@ -19,6 +19,7 @@ cryptography.
 
 ## Awards
 
+* 2025 Crypto Valley Conference Best Student Paper
 * 2023 NUS School of Computing Teaching Fellowship
 * 2022 NUS School of Computing Teaching Excellence Award
 * 2020 NUS Graduate Research Scholarship
