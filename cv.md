@@ -13,7 +13,7 @@ cryptography.
 
 ## Education
 
-* PhD Candidate, Computer Science, National University of Singapore School of Computing, expected completion: 2025
+* M.Comp., Infocomm Security Specialization, National University of Singapore School of Computing, expected completion: 2025.
 
 * B.A.Sc. Electrical Engineering, 2003, University of Waterloo, Honours with Distinction, Computer Engineering Option, GPA 3.78
 
@@ -30,8 +30,37 @@ cryptography.
 * 1998 Waterloo Cooperative Residence Pine Cone Citizenship Award
 * 1998 Best of School, Descartes Mathematics Contest
 
+## Publications
+
+
+{% assign publications = site.pubs | sort: "year" | reverse %}
+{% for pub in publications %}
+* [**{{pub.title}}**]({{pub.pub_url}})<br/>
+   {{ pub.authors }}<br/>
+   {{ pub.publication }}, {{ pub.year}}
+{% endfor %}
+
 
 ## Teaching
+
+* NUS CS2040C Data Structures and Algorithms in C++, Aug to Nov 2023,
+  Jan to April 2024, Prof. Holun (Alan) Cheng
+
+    * Enabled students to use any platform for their assignments and
+    practical examination by rewriting assignments to use CMake and
+    googletests.
+
+    * Updated course materials to be more problem-based and have
+    students work in teams during tutorials rather than tradition
+    lecture-oriented tutorials.
+
+    * These efforts resulted in students being able to explore the
+    core DS&A material themselves, engage in active learning, and
+    ultimately own their learning experience.
+
+    * As head TA, coordinated with the TA team to ensure consistent
+    delivery of course materials and grading standards.
+
 
 * NUS CS4230/5430 Foundations of Modern Cryptography, Jan to April
 2023, Prof. Prashant Vasudevan
@@ -57,7 +86,7 @@ Prateek Saxena
     excellence in teaching.
 
 
-## Experience
+## Industry Experience
 
 ### **Google**, Senior Software Engineer (SWE5)
 
