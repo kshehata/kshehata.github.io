@@ -8,10 +8,10 @@ permalink: /cv/
 
 ## Profile
 
-Kareem is a researcher, engineer, and entrepreneur with over 20 years
-of field experience. He's currently pursuing a PhD at National
-University of Singapore's School of Computing focussed on applied
-cryptography.
+Kareem is an advanced cryptography and machine learning security
+researcher with over 20 years of experience in engineering, research,
+and leadership roles. He combines deep technical expertise with a
+track record of innovation in both academia and industry.
 
 ## Education
 
@@ -199,7 +199,7 @@ Stäubli robotics, motion control
 
 ### **Archronix Corp**, Hardware Designer
 
-Toronto, ON, 2003-2004
+Toronto, Ontario, Canada, 2003-2004
 
 * Hardware designer for aerospace APU motor controller and simulator
 
