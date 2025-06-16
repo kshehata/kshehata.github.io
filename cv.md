@@ -216,6 +216,6 @@ verification
   * Portuguese (C2)
   * French (C1)
   * Spanish (B2)
-  * Basic Mandarin (B1/HSK4).
+  * Basic Mandarin (B1/HSK3)
 * Dog agility and frisbee.
 * Playing music, particularly electric guitar.
