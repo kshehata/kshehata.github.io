@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Systems and methods for unmanned vehicles having self-calibrating sensors and actuators
+title: "Systems And Methods For Unmanned Vehicles Having Self-Calibrating Sensors And Actuators"
 authors: Ryan Christopher Gariepy, <strong>Kareem Shehata</strong>, Prasenjit Mukherjee, Anthony Tod, Teyvonia Thomas, Yan Ma
 publication: U.S. Patent 10,990,093
 year: 2021

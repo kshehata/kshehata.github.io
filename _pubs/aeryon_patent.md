@@ -1,6 +1,6 @@
 ---
 layout: default
-title: System and method for controlling unmanned aerial vehicles
+title: "System And Method For Controlling Unmanned Aerial Vehicles"
 authors: <strong>Kareem Shehata</strong>, Matthew Thiffault, James Thomas Pike, Michael Peasgood, Thomas Nagy
 publication: U.S. Patent 9,841,761
 year: 2017
