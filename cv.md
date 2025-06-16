@@ -208,3 +208,14 @@ including requirements analysis, circuit design, construction, and
 verification
 
 * Key technologies: analog and digital circuit and board design, VHDL
+
+## Hobbies / Interests
+
+* Languages:
+  * English (native)
+  * Portuguese (C2)
+  * French (C1)
+  * Spanish (B2)
+  * Basic Mandarin (B1/HSK4).
+* Dog agility and frisbee.
+* Playing music, particularly electric guitar.
