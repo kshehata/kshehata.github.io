@@ -4,6 +4,8 @@ title: CV
 permalink: /cv/
 ---
 
+[Industry CV in PDF](/assets/Kareem Shehata Industry CV.pdf)
+
 ## Profile
 
 Kareem is a researcher, engineer, and entrepreneur with over 20 years
